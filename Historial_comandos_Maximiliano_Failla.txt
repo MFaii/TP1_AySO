@@ -1,0 +1,105 @@
+history
+ll
+ls -l
+lsb_release -a 
+cat /etc/os-release 
+cat /etc/debian_version 
+whatis useradd 
+sudo apt update
+sudo apt install tree -y
+sudo apt install -y manpages-es
+sudo localectl set-locale LANG=es_AR.UTF-8
+grep -E 'vagr|user' /etc/passwd
+sudo su
+whoami 
+sudo useradd -m -c "user2 ok" -s /bin/bash user_2
+id user_2 
+ls -l /home/
+sudo su 
+sudo groupadd desarrollo
+grep desa /etc/group
+sudo useradd -m -c "user3 ok" -s /bin/bash -G desarrollo user_3
+grep desa /etc/group
+sudo useradd -m -c "user4 ok" -s /bin/bash -G desarrollo user_4
+grep desa /etc/group
+grep user_ /etc/passwd
+sudo passwd user_3
+grep user_ /etc/shadow 
+sudo grep user_ /etc/shadow 
+echo "col1 col2 col3" 
+echo "col1 col2 col3" | awk '{print }'
+echo "col1 col2 col3" | awk '{print $2}'
+echo "col1:col2:col3" | awk '{print $2}'
+echo "col1:col2:col3" | awk -F ':' '{print $2}'
+echo "col1 col2:col3" | awk -F ':' '{print $2}'
+echo "col1 col2:col3" | awk '{print $2}'
+echo "col1 col2:col3" | awk '{print $2}' | awk -F ':' '{print $1}'
+sudo grep user_3 /etc/shadow | awk -F ':' '{print $2}'
+history | grep 5
+history | grep 30 
+sudo useradd -m -s /bin/bash -p '$YASDJASDnmkcasndjw2432j8mdsA832AS%AWe2qd#' user_5 
+sudo grep -E 'user_3|user_5' /etc/shadow | awk -F ':' '{print $1,$2}'
+#sudo useradd -m -s /bin/bash -p '$YASDJASDnmkcasndjw2432j8mdsA832AS%AWe2qd#' user_6 
+sudo useradd -m -s /bin/bash -p "$(sudo grep 'user_3' /etc/shadow | awk -F ':' 'print $1,$2}')" user_6 
+sudo useradd -m -s /bin/bash -p "$(sudo grep 'user_3' /etc/shadow | awk -F ':' 'print {$1,$2}')" user_6 
+sudo useradd -m -s /bin/bash -p "$(sudo grep 'user_3' /etc/shadow | awk -F ':' '{print $1,$2}')" user_6 
+sudo useradd -m -s /bin/bash -p "$(sudo grep 'user_3' /etc/shadow | awk -F ':' '{print $1,$2}')" user_7 
+sudo shutdown now
+sudo shutdown
+sudo shutdown now
+ssh-keygen -t ed25519
+cat \$HOME/.ssh/*.pub
+cat $HOME/.ssh/*.pub
+cd
+mkdir repogit
+mkdir repogit_tp
+cd repogit_tp/
+git clone git@github.com:MFaii/TP1_AySO.git
+cd TP1_AySO/
+pwd
+ls -l
+cat /etc/os-release 
+man grep
+grep HOME_URL /etc/os-release 
+grep home_url /etc/os-release 
+grep -i HOME_URL /etc/os-release 
+grep -i home_url /etc/os-release 
+whoaim
+whoami
+echo "Usuario=$(whoami)" > datos_usuario.txt
+git add .
+git status
+git commit -m "ADD:agregado 1er ejercicio sobre datos_usuarios.txt"
+git config --global user.email faillamaximiliano@gmail.com
+git config --global user.name MFaii
+git commit -m "ADD:agregado 1er ejercicio sobre datos_usuarios.txt"
+git status
+git push
+grep "model name" /proc/cpuinfo | head -n1 >> datos_usuario.txt 
+git status
+git add .
+git commit -m "feat:Añadiendo informacion de CPU"
+git push
+cat <<EOF >> README.md 
+Alumno: Maximiliano Failla
+Division: 313
+Turno: Noche
+EOF
+
+git add README.md datos_usuario.txt 
+git commit -m "ADD: Añadiendo Readme y datos del usuario"
+git push
+history -a
+cp SIN MOVERSE DEL DIRECTORIO, utilizando PATHS Relativo…
+● Forzar la Escritura del archivo donde se encuentra el historial de comandos
+history -a agrega (append) los comandos nuevos al archivo
+$HOME/.bash_history
+● Copiar dentro del repositorio el archivo .bash_history que se encuentra en el home del usuario
+dejándolo con el nombre “Historial_comandos_<Tu-Nombre>.txt”
+SIN MOVERSE DEL DIRECTORIO, utilizando PATHS Relativo…
+● Forzar la Escritura del archivo donde se encuentra el historial de comandos
+history -a agrega (append) los comandos nuevos al archivo
+$HOME/.bash_history
+● Copiar dentro del repositorio el archivo .bash_history que se encuentra en el home del usuario
+dejándolo con el nombre “Historial_comandos_<Tu-Nombre>.txt”
+cp ~/.bash_history ./Historial_comandos_<Maximiliano_Failla>.txt
